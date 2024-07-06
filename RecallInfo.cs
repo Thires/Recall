@@ -34,7 +34,7 @@ namespace Recall
             if (Regex.IsMatch(Text, @"^/recall\shelp$", RegexOptions.IgnoreCase))
             {
                 Info?.EchoText("\n/recall will open the GUI\n/recall <name> to display info\n/recall add <name> <info> to add\nUse /n or \\\\n to add a new line\nExample /recall add test this is/na test\nDon't click the clickable link, it just throws an error\n/recall remove <name> to remove a note");
-                
+                return "";
             }
             else if (Regex.IsMatch(Text, @"^/recall\sadd\s+\S+\s+.+", RegexOptions.IgnoreCase))
             {
@@ -49,6 +49,7 @@ namespace Recall
                 {
                     Info?.EchoText("Usage: /recall add <name> <info>");
                 }
+                return "";
             }
             else if (Regex.IsMatch(Text, @"^/recall\sremove\s+\S+", RegexOptions.IgnoreCase))
             {
@@ -61,6 +62,7 @@ namespace Recall
                 {
                     Info?.EchoText("Usage: /recall remove <name>");
                 }
+                return "";
             }
             else if (Regex.IsMatch(Text, @"^/recall\s", RegexOptions.IgnoreCase))
             {
@@ -80,10 +82,12 @@ namespace Recall
                     else
                     Info?.EchoText($"No information found for '{name}'");
                 }
+                return "";
             }
             else if (Regex.IsMatch(Text, @"^/recall$", RegexOptions.IgnoreCase))
             {
                 Show();
+                return "";
             }
             return Text;
         }

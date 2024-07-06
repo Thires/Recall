@@ -79,7 +79,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
-            BackColor = Color.Gray;
+            BackColor = Color.LightSlateGray;
             ClientSize = new Size(451, 142);
             Controls.Add(comboBox1);
             Controls.Add(textBox);
