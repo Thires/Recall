@@ -18,7 +18,7 @@
             ButtonAdd = new Button();
             ButtonRemove = new Button();
             ButtonLoad = new Button();
-            textBox2 = new TextBox();
+            textBox = new TextBox();
             comboBox1 = new ComboBox();
             SuspendLayout();
             // 
@@ -52,18 +52,18 @@
             ButtonLoad.UseVisualStyleBackColor = true;
             ButtonLoad.Click += ButtonLoad_Click;
             // 
-            // textBox2
+            // textBox
             // 
-            textBox2.AcceptsTab = true;
-            textBox2.BackColor = Color.Black;
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.ForeColor = Color.White;
-            textBox2.Location = new Point(113, 7);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(333, 127);
-            textBox2.TabIndex = 1;
-            textBox2.TextChanged += TextBox2_TextChanged;
+            textBox.AcceptsTab = true;
+            textBox.BackColor = Color.Black;
+            textBox.BorderStyle = BorderStyle.None;
+            textBox.ForeColor = Color.White;
+            textBox.Location = new Point(113, 7);
+            textBox.Multiline = true;
+            textBox.Name = "textBox";
+            textBox.Size = new Size(333, 127);
+            textBox.TabIndex = 1;
+            textBox.TextChanged += TextBox_TextChanged;
             // 
             // comboBox1
             // 
@@ -82,7 +82,7 @@
             BackColor = Color.Gray;
             ClientSize = new Size(451, 142);
             Controls.Add(comboBox1);
-            Controls.Add(textBox2);
+            Controls.Add(textBox);
             Controls.Add(ButtonLoad);
             Controls.Add(ButtonRemove);
             Controls.Add(ButtonAdd);
@@ -104,7 +104,7 @@
         private Button ButtonAdd;
         private Button ButtonRemove;
         private Button ButtonLoad;
-        private TextBox textBox2;
+        private TextBox textBox;
         internal ComboBox comboBox1;
     }
 }

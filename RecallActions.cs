@@ -137,7 +137,7 @@ namespace Recall
                     }
 
                     xmlDocument.Save(xmlPath);
-                    RecallInfo.Info?.EchoText($"Recall note for '{name}' has been added/updated.");
+                    RecallInfo.Info?.EchoText($"{name} has been added/updated.");
                 }
                 else
                 {
@@ -198,11 +198,11 @@ namespace Recall
                         {
                             rootElement.RemoveChild(existingElement);
                             xmlDocument.Save(xmlPath);
-                            RecallInfo.Info?.EchoText($"Recall note for '{name}' has been removed.");
+                            RecallInfo.Info?.EchoText($"{name} has been removed.");
                         }
                         else
                         {
-                            RecallInfo.Info?.EchoText($"No recall note found for '{name}' to remove.");
+                            RecallInfo.Info?.EchoText($"{name} is not found to remove.");
                         }
                     }
                     else

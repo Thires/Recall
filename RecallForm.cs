@@ -46,17 +46,17 @@ namespace Recall
         {
             if (comboBox1.SelectedItem is RecallItem selectedItem)
             {
-                textBox2.Text = selectedItem.Info;
+                textBox.Text = selectedItem.Info;
             }
         }
 
-        private void TextBox2_TextChanged(object sender, EventArgs e)
+        private void TextBox_TextChanged(object sender, EventArgs e)
         {
             if (comboBox1.SelectedIndex != -1)
             {
                 if (comboBox1.SelectedItem is RecallItem selectedItem)
                 {
-                    selectedItem.Info = textBox2.Text;
+                    selectedItem.Info = textBox.Text;
                 }
             }
         }
@@ -68,15 +68,15 @@ namespace Recall
                 var existingItem = FindItemByName(comboBox1.Text);
                 if (existingItem != null)
                 {
-                    existingItem.Info = textBox2.Text;
+                    existingItem.Info = textBox.Text;
                 }
                 else
                 {
-                    RecallItem item = new(comboBox1.Text, textBox2.Text);
+                    RecallItem item = new(comboBox1.Text, textBox.Text);
                     comboBox1.Items.Add(item);
                 }
                 SaveToXML();
-                textBox2.Clear();
+                textBox.Clear();
                 comboBox1.Text = string.Empty;
             }
             LoadFromXML();
@@ -93,7 +93,7 @@ namespace Recall
                     if (result == DialogResult.Yes)
                     {
                         comboBox1.Items.Remove(selectedItem);
-                        textBox2.Clear();
+                        textBox.Clear();
                     }
                 }
             }

@@ -7,9 +7,9 @@ namespace Recall
     {
         public string Name => "Recall";
 
-        public string Version => "1.0.0";
+        public string Version => "1.0.1";
 
-        public string Description => "Recall info";
+        public string Description => "Recall info about names or whatever";
 
         public string Author => "Thires";
 
@@ -23,7 +23,6 @@ namespace Recall
         public void Initialize(IHost host)
         {
             Info = host;
-            //Action = new RecallActions();
         }
 
         public void ParentClosing()
@@ -34,10 +33,10 @@ namespace Recall
         {
             if (Regex.IsMatch(Text, @"^/recall\shelp$", RegexOptions.IgnoreCase))
             {
-                Info?.EchoText("\n/recall will open the GUI\n/recall <name> to display the note\n/recall add <name> <info> to add a note\nUse /n or \\\\n to add a new line\nExample /recall add test this is/na test\nDon't click the clickable link, it just throws an error\n/recall remove <name> to remove a note");
+                Info?.EchoText("\n/recall will open the GUI\n/recall <name> to display info\n/recall add <name> <info> to add\nUse /n or \\\\n to add a new line\nExample /recall add test this is/na test\nDon't click the clickable link, it just throws an error\n/recall remove <name> to remove a note");
                 
             }
-            else if (Regex.IsMatch(Text, @"^/recall\sadd[\s|$]", RegexOptions.IgnoreCase))
+            else if (Regex.IsMatch(Text, @"^/recall\sadd\s+\S+\s+.+", RegexOptions.IgnoreCase))
             {
                 string[] parts = Text[12..].Split(new[] { ' ' }, 2);
                 if (parts.Length == 2)
@@ -51,7 +50,7 @@ namespace Recall
                     Info?.EchoText("Usage: /recall add <name> <info>");
                 }
             }
-            else if (Regex.IsMatch(Text, @"^/recall\sremove\s", RegexOptions.IgnoreCase))
+            else if (Regex.IsMatch(Text, @"^/recall\sremove\s+\S+", RegexOptions.IgnoreCase))
             {
                 string name = Text[15..].Trim();
                 if (!string.IsNullOrEmpty(name))
@@ -74,6 +73,11 @@ namespace Recall
                 }
                 else
                 {
+                    if (name.Equals("add", StringComparison.OrdinalIgnoreCase))
+                        Info?.EchoText("Usage: /recall add <name> <info>");
+                    else if (name.Equals("remove", StringComparison.OrdinalIgnoreCase))
+                        Info?.EchoText("Usage: /recall remove <name>");
+                    else
                     Info?.EchoText($"No information found for '{name}'");
                 }
             }
