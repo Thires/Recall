@@ -7,7 +7,7 @@ namespace Recall
     {
         public string Name => "Recall";
 
-        public string Version => "1.0.1";
+        public string Version => "1.1";
 
         public string Description => "Recall info about names or whatever";
 
@@ -16,7 +16,6 @@ namespace Recall
         public bool Enabled { get; set; } = true;
 
         private RecallForm? Form;
-        //private RecallActions? Action;
         private static IHost? info;
         public static IHost? Info { get => info; set => info = value; }
 

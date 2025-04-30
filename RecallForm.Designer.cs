@@ -20,35 +20,36 @@
             ButtonLoad = new Button();
             textBox = new TextBox();
             comboBox1 = new ComboBox();
+            ButtonEcho = new Button();
             SuspendLayout();
             // 
             // ButtonAdd
             // 
-            ButtonAdd.Location = new Point(12, 53);
+            ButtonAdd.Location = new Point(4, 68);
             ButtonAdd.Name = "ButtonAdd";
-            ButtonAdd.Size = new Size(75, 23);
+            ButtonAdd.Size = new Size(103, 23);
             ButtonAdd.TabIndex = 2;
-            ButtonAdd.Text = "Add";
+            ButtonAdd.Text = "Add Item";
             ButtonAdd.UseVisualStyleBackColor = true;
             ButtonAdd.Click += ButtonAdd_Click;
             // 
             // ButtonRemove
             // 
-            ButtonRemove.Location = new Point(12, 82);
+            ButtonRemove.Location = new Point(4, 97);
             ButtonRemove.Name = "ButtonRemove";
-            ButtonRemove.Size = new Size(75, 23);
+            ButtonRemove.Size = new Size(103, 23);
             ButtonRemove.TabIndex = 3;
-            ButtonRemove.Text = "Remove";
+            ButtonRemove.Text = "Remove Item";
             ButtonRemove.UseVisualStyleBackColor = true;
             ButtonRemove.Click += ButtonRemove_Click;
             // 
             // ButtonLoad
             // 
-            ButtonLoad.Location = new Point(12, 111);
+            ButtonLoad.Location = new Point(4, 126);
             ButtonLoad.Name = "ButtonLoad";
-            ButtonLoad.Size = new Size(75, 23);
+            ButtonLoad.Size = new Size(103, 23);
             ButtonLoad.TabIndex = 4;
-            ButtonLoad.Text = "Load";
+            ButtonLoad.Text = "Load File";
             ButtonLoad.UseVisualStyleBackColor = true;
             ButtonLoad.Click += ButtonLoad_Click;
             // 
@@ -61,18 +62,29 @@
             textBox.Location = new Point(113, 7);
             textBox.Multiline = true;
             textBox.Name = "textBox";
-            textBox.Size = new Size(333, 127);
+            textBox.ScrollBars = ScrollBars.Both;
+            textBox.Size = new Size(333, 141);
             textBox.TabIndex = 1;
             textBox.TextChanged += TextBox_TextChanged;
             // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(12, 22);
+            comboBox1.Location = new Point(4, 7);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(97, 23);
+            comboBox1.Size = new Size(105, 23);
             comboBox1.TabIndex = 0;
             comboBox1.SelectedIndexChanged += ComboBox1_SelectedIndexChanged;
+            // 
+            // ButtonEcho
+            // 
+            ButtonEcho.Location = new Point(4, 39);
+            ButtonEcho.Name = "ButtonEcho";
+            ButtonEcho.Size = new Size(103, 23);
+            ButtonEcho.TabIndex = 5;
+            ButtonEcho.Text = "Echo to Window";
+            ButtonEcho.UseVisualStyleBackColor = true;
+            ButtonEcho.Click += ButtonEcho_Click;
             // 
             // RecallForm
             // 
@@ -80,7 +92,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = Color.LightSlateGray;
-            ClientSize = new Size(451, 142);
+            ClientSize = new Size(451, 156);
+            Controls.Add(ButtonEcho);
             Controls.Add(comboBox1);
             Controls.Add(textBox);
             Controls.Add(ButtonLoad);
@@ -106,5 +119,6 @@
         private Button ButtonLoad;
         private TextBox textBox;
         internal ComboBox comboBox1;
+        private Button ButtonEcho;
     }
 }

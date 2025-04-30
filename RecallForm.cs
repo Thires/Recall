@@ -136,7 +136,7 @@ namespace Recall
             this.FormClosing -= (s, ev) => RecallForm_FormClosing(s, ev);
             this.FormClosed -= (s, ev) => RecallForm_FormClosed(s, ev);
         }
-    
+
         private RecallItem? FindItemByName(string name)
         {
             foreach (var item in comboBox1.Items)
@@ -249,6 +249,19 @@ namespace Recall
                 RecallInfo.Info?.EchoText("Plugin path is not set.");
             }
         }
+
+        private void ButtonEcho_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedItem is RecallItem selectedItem)
+            {
+                RecallActions.Display(selectedItem.Name, selectedItem.Info);
+            }
+            else
+            {
+                RecallInfo.Info?.EchoText("No item selected to echo.");
+            }
+        }
+
     }
 
     public class RecallItem
