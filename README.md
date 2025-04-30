@@ -1,4 +1,4 @@
-![image](https://github.com/Thires/Recall/assets/28072996/0f3c3dbd-25d4-44de-9747-088d4be333c1)
+![image](https://github.com/user-attachments/assets/02d02c68-2cdf-42fe-81f2-a36af7710f64)
 
 /recall will open the GUI<br>
 /recall <name> to display the note<br>
