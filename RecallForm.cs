@@ -254,13 +254,15 @@ namespace Recall
         {
             if (comboBox1.SelectedItem is RecallItem selectedItem)
             {
-                RecallActions.Display(selectedItem.Name, selectedItem.Info);
+                string normalizedInfo = selectedItem.Info.Replace("\r\n", "\n");
+                RecallActions.Display(selectedItem.Name, normalizedInfo);
             }
             else
             {
                 RecallInfo.Info?.EchoText("No item selected to echo.");
             }
         }
+
 
     }
 
