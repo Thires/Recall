@@ -7,7 +7,7 @@ namespace Recall
     {
         public string Name => "Recall";
 
-        public string Version => "1.1";
+        public string Version => "1.2";
 
         public string Description => "Recall info about names or whatever";
 

@@ -27,7 +27,7 @@
             // 
             ButtonAdd.Location = new Point(4, 68);
             ButtonAdd.Name = "ButtonAdd";
-            ButtonAdd.Size = new Size(103, 23);
+            ButtonAdd.Size = new Size(105, 23);
             ButtonAdd.TabIndex = 2;
             ButtonAdd.Text = "Add Item";
             ButtonAdd.UseVisualStyleBackColor = true;
@@ -37,7 +37,7 @@
             // 
             ButtonRemove.Location = new Point(4, 97);
             ButtonRemove.Name = "ButtonRemove";
-            ButtonRemove.Size = new Size(103, 23);
+            ButtonRemove.Size = new Size(105, 23);
             ButtonRemove.TabIndex = 3;
             ButtonRemove.Text = "Remove Item";
             ButtonRemove.UseVisualStyleBackColor = true;
@@ -47,7 +47,7 @@
             // 
             ButtonLoad.Location = new Point(4, 126);
             ButtonLoad.Name = "ButtonLoad";
-            ButtonLoad.Size = new Size(103, 23);
+            ButtonLoad.Size = new Size(105, 23);
             ButtonLoad.TabIndex = 4;
             ButtonLoad.Text = "Load File";
             ButtonLoad.UseVisualStyleBackColor = true;
@@ -56,6 +56,7 @@
             // textBox
             // 
             textBox.AcceptsTab = true;
+            textBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             textBox.BackColor = Color.Black;
             textBox.BorderStyle = BorderStyle.None;
             textBox.ForeColor = Color.White;
@@ -63,7 +64,7 @@
             textBox.Multiline = true;
             textBox.Name = "textBox";
             textBox.ScrollBars = ScrollBars.Both;
-            textBox.Size = new Size(333, 141);
+            textBox.Size = new Size(340, 142);
             textBox.TabIndex = 1;
             textBox.TextChanged += TextBox_TextChanged;
             // 
@@ -80,7 +81,7 @@
             // 
             ButtonEcho.Location = new Point(4, 39);
             ButtonEcho.Name = "ButtonEcho";
-            ButtonEcho.Size = new Size(103, 23);
+            ButtonEcho.Size = new Size(105, 23);
             ButtonEcho.TabIndex = 5;
             ButtonEcho.Text = "Echo to Window";
             ButtonEcho.UseVisualStyleBackColor = true;
@@ -92,18 +93,18 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = Color.LightSlateGray;
-            ClientSize = new Size(451, 156);
+            ClientSize = new Size(453, 156);
             Controls.Add(ButtonEcho);
             Controls.Add(comboBox1);
             Controls.Add(textBox);
             Controls.Add(ButtonLoad);
             Controls.Add(ButtonRemove);
             Controls.Add(ButtonAdd);
-            FormBorderStyle = FormBorderStyle.FixedDialog;
             KeyPreview = true;
             MaximizeBox = false;
+            MaximumSize = new Size(int.MaxValue, 182);
+            MinimumSize = new Size(463, 182);
             Name = "RecallForm";
-            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Recall";
             TopMost = true;
