@@ -102,7 +102,7 @@
             Controls.Add(ButtonAdd);
             KeyPreview = true;
             MaximizeBox = false;
-            MaximumSize = new Size(int.MaxValue, 182);
+            //MaximumSize = new Size(int.MaxValue, 182);
             MinimumSize = new Size(463, 182);
             Name = "RecallForm";
             StartPosition = FormStartPosition.CenterScreen;
